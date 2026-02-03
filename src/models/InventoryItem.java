@@ -1,0 +1,33 @@
+package models;
+
+public abstract class InventoryItem {
+    private String id;
+    private String name;
+    private boolean isAvailable;
+
+    // Constructor
+    public InventoryItem(String id, String name, boolean isAvailable) {
+        this.id = id;
+        this.name = name;
+        this.isAvailable = isAvailable;
+    }
+
+    // Getters and Setters
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public boolean isAvailable() { return isAvailable; }
+    public void setAvailable(boolean available) { isAvailable = available; }
+
+    // Abstract method
+    public abstract String getItemType();
+
+    // toString method
+    @Override
+    public String toString() {
+        return "InventoryItem [id=" + id + ", name=" + name + ", available=" + isAvailable + "]";
+    }
+}
